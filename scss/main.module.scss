@@ -1,0 +1,9 @@
+@import '@/scss/variables.module.scss';
+
+.themeLight {
+  @include theme-light;
+}
+
+.themeDark {
+  @include theme-dark;
+}

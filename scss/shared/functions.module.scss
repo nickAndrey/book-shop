@@ -1,0 +1,3 @@
+@function getPxBySpace($number) {
+  @return $number * 8 + px;
+}

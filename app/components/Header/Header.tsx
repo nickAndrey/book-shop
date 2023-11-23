@@ -3,6 +3,7 @@ import SearchIcon from '@/public/icons/search.svg';
 import ShoppingBagIcon from '@/public/icons/shopping-bag.svg';
 import Dropdown from './Dropdown/Dropdown';
 import styles from './Header.module.scss';
+import Navigation from './Navigation/Navigation';
 import Search from './Search/Search';
 
 const dropdownPanelItems = [
@@ -14,7 +15,7 @@ const dropdownPanelItems = [
         <BurgerIcon /> <b>bookshop</b>
       </>
     ),
-    content: <div>Dropdown 1 content</div>,
+    content: <Navigation />,
   },
   {
     id: 'panel-2',

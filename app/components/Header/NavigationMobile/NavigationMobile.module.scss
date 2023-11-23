@@ -1,0 +1,49 @@
+@import '@/scss/shared/variables.module.scss';
+
+.navigation-container {
+  display: flex;
+  align-items: center;
+  gap: getPxBySpace(3);
+}
+
+.navigation-list {
+  display: none;
+  flex-direction: column;
+  gap: getPxBySpace(2);
+  position: absolute;
+  top: calc(100% + 1px);
+  left: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  min-height: 30vh;
+  background-color: var(--grey-100);
+  padding-top: getPxBySpace(2);
+
+  &.navigation-list--open {
+    display: flex;
+  }
+}
+
+.navigation-item {
+  display: flex;
+  text-decoration: none;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  padding: getPxBySpace(1) getPxBySpace(2);
+}
+
+.toggle-navigation-button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.shop-name {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  text-decoration: none;
+}

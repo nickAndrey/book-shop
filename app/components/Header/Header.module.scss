@@ -1,0 +1,37 @@
+@import '@/scss/shared/variables.module.scss';
+
+.header-container {
+  display: flex;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  border-bottom: 1px solid var(--grey-300);
+  padding: getPxBySpace(1) getPxBySpace(2);
+}
+
+.toggle-dropdown-button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: var(--grey-100);
+  padding: getPxBySpace(2);
+  gap: getPxBySpace(2);
+  flex-direction: column;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+
+  &.dropdown--open {
+    display: flex;
+  }
+}

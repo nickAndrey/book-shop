@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import Header from '../Header/Header';
 import styles from './Layout.module.scss';
 
 type LayoutProps = {
@@ -8,7 +9,7 @@ type LayoutProps = {
 export default function Layout({ children }: LayoutProps) {
   return (
     <div className={styles.container}>
-      <header>header</header>
+      <Header />
       <main>{children}</main>
       <footer>Footer</footer>
     </div>

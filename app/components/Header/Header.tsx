@@ -1,10 +1,42 @@
+import BurgerIcon from '@/public/icons/menu-burger.svg';
+import SearchIcon from '@/public/icons/search.svg';
+import ShoppingBagIcon from '@/public/icons/shopping-bag.svg';
+import Dropdown from './Dropdown/Dropdown';
 import styles from './Header.module.scss';
-import NavigationMobile from './NavigationMobile/NavigationMobile';
+
+const dropdownPanelItems = [
+  {
+    id: 'panel-1',
+    className: styles['navigation-trigger'],
+    component: (
+      <>
+        <BurgerIcon /> <b>bookshop</b>
+      </>
+    ),
+    content: <div>Dropdown 1 content</div>,
+  },
+  {
+    id: 'panel-2',
+    className: styles['search-panel-trigger'],
+    component: <SearchIcon />,
+    content: <div>Dropdown 2 content</div>,
+  },
+  {
+    id: 'panel-3',
+    component: <ShoppingBagIcon />,
+    content: <div>Dropdown 3 content</div>,
+  },
+];
 
 export default function Header() {
   return (
     <header className={styles['header-container']}>
-      <NavigationMobile />
+      <Dropdown
+        panelConfig={{
+          panelClassName: styles['dropdown-panel'],
+          items: dropdownPanelItems,
+        }}
+      />
     </header>
   );
 }

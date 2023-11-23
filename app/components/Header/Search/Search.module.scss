@@ -22,10 +22,15 @@
   border-radius: 5px;
   font-size: 1.2rem;
   color: var(--primary-color);
+  background-color: var(--secondary-color);
   transition: all 0.3s ease-in-out;
 
   &:focus {
     outline: none;
+  }
+
+  &::placeholder {
+    color: var(--input-placeholder-color);
   }
 }
 
@@ -35,4 +40,10 @@
   color: var(--primary-color);
   font-size: 1rem;
   cursor: pointer;
+
+  svg {
+    path {
+      fill: var(--primary-color);
+    }
+  }
 }

@@ -11,12 +11,21 @@
   background-color: var(--secondary-color);
 }
 
+.dropdown-panel {
+  svg {
+    path {
+      fill: var(--primary-color);
+    }
+  }
+}
+
 .navigation-trigger {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: getPxBySpace(2);
   margin-right: auto;
+  color: var(--primary-color);
 }
 
 .search-panel-trigger {

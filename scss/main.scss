@@ -1,0 +1,14 @@
+@import '@/scss/themes/theme-dark.module.scss';
+@import '@/scss/themes/theme-light.module.scss';
+@import '@/scss/shared/variables.module.scss';
+@import '@/scss/normalize.scss';
+
+:root {
+  [data-theme='light'] {
+    @include theme-light;
+  }
+
+  [data-theme='dark'] {
+    @include theme-dark;
+  }
+}

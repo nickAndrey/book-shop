@@ -23,7 +23,8 @@
   left: 0;
   right: 0;
   min-height: 30vh;
-  background-color: var(--grey-100);
+  background-color: var(--secondary-color);
+  box-shadow: var(--primary-box-shadow);
   padding: getPxBySpace(1) getPxBySpace(2);
   box-sizing: border-box;
 }

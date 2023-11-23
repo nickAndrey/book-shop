@@ -1,6 +1,5 @@
 'use client';
 
-import styles from '@/scss/main.module.scss';
 import {
   ReactNode,
   createContext,
@@ -11,13 +10,18 @@ import {
 
 type Theme = 'light' | 'dark';
 
+enum ThemeEnum {
+  LIGHT = 'light',
+  DARK = 'dark',
+}
+
 type ThemeContextType = {
   theme: Theme;
   setTheme: (theme: Theme) => void;
 };
 
 export const ThemeContext = createContext<ThemeContextType>({
-  theme: 'light',
+  theme: ThemeEnum.LIGHT,
   setTheme: () => {},
 });
 
@@ -26,7 +30,7 @@ type ThemeProviderProps = {
 };
 
 export default function ThemeProvider({ children }: ThemeProviderProps) {
-  const [theme, setTheme] = useState<Theme>('light');
+  const [theme, setTheme] = useState<Theme>(ThemeEnum.LIGHT);
 
   useEffect(() => {
     const storedTheme = localStorage.getItem('theme') as Theme;
@@ -43,7 +47,11 @@ export default function ThemeProvider({ children }: ThemeProviderProps) {
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme: setThemeToLocalStorage }}>
-      <div className={theme === 'dark' ? styles.themeDark : styles.themeLight}>
+      <div
+        data-theme={
+          theme === ThemeEnum.LIGHT ? ThemeEnum.LIGHT : ThemeEnum.DARK
+        }
+      >
         {children}
       </div>
     </ThemeContext.Provider>

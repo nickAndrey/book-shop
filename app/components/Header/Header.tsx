@@ -3,6 +3,7 @@ import SearchIcon from '@/public/icons/search.svg';
 import ShoppingBagIcon from '@/public/icons/shopping-bag.svg';
 import Dropdown from './Dropdown/Dropdown';
 import styles from './Header.module.scss';
+import Search from './Search/Search';
 
 const dropdownPanelItems = [
   {
@@ -19,7 +20,7 @@ const dropdownPanelItems = [
     id: 'panel-2',
     className: styles['search-panel-trigger'],
     component: <SearchIcon />,
-    content: <div>Dropdown 2 content</div>,
+    content: <Search />,
   },
   {
     id: 'panel-3',

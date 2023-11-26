@@ -1,3 +1,11 @@
+import Typography from './components/Typography/Typography';
+
 export default function Home() {
-  return <span>Home</span>;
+  return (
+    <>
+      <Typography component="h1" variant="heading">
+        Title
+      </Typography>
+    </>
+  );
 }

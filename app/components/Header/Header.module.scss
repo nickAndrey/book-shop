@@ -9,6 +9,7 @@
   padding: getPxBySpace(1) getPxBySpace(2);
   box-sizing: border-box;
   background-color: var(--secondary-color);
+  z-index: 1;
 }
 
 .dropdown-panel {
@@ -17,17 +18,18 @@
       fill: var(--primary-color);
     }
   }
-}
 
-.navigation-trigger {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: getPxBySpace(2);
-  margin-right: auto;
-  color: var(--primary-color);
-}
+  .navigation-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: getPxBySpace(2);
+    margin-right: auto;
+    color: var(--primary-color);
+    font-weight: 500;
+  }
 
-.search-panel-trigger {
-  margin-right: getPxBySpace(2);
+  .search-panel-trigger {
+    margin-right: getPxBySpace(2);
+  }
 }

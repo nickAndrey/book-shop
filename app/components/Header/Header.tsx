@@ -12,7 +12,7 @@ const dropdownPanelItems = [
     className: styles['navigation-trigger'],
     component: (
       <>
-        <BurgerIcon /> <b>bookshop</b>
+        <BurgerIcon /> <span>bookshop</span>
       </>
     ),
     content: <Navigation />,

@@ -78,18 +78,20 @@ export default function Home() {
   return (
     <>
       <Typography component="h1" variant="heading">
-        Title
+        Inspiration books
       </Typography>
 
-      {books.map((book) => (
-        <ProductCard
-          key={book.bookTitle}
-          img={book.bookImage}
-          title={book.bookTitle}
-          description={book.bookDescription}
-          price={book.price}
-        />
-      ))}
+      <div style={{ display: 'grid', gap: 10, marginTop: 32 }}>
+        {books.map((book) => (
+          <ProductCard
+            key={book.bookTitle}
+            img={book.bookImage}
+            title={book.bookTitle}
+            description={book.bookDescription}
+            price={book.price}
+          />
+        ))}
+      </div>
     </>
   );
 }

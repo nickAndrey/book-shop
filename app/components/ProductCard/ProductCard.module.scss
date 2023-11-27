@@ -3,7 +3,7 @@
 .product-card {
   @include flex-column-center;
   width: 100%;
-  background-color: var(--grey-300);
+  background-color: var(--grey-200);
   padding: getPxBySpace(3) getPxBySpace(2);
   box-sizing: border-box;
 
@@ -28,6 +28,7 @@
   }
 
   &__price {
-    font-weight: bold;
+    font-weight: 300;
+    font-size: 1.5rem;
   }
 }

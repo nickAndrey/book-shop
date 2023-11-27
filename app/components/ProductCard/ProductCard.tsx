@@ -44,8 +44,8 @@ export default function ProductCard({
         </Typography>
 
         <Typography
-          component="p"
-          variant="body"
+          component="span"
+          variant="caption"
           className={styles['product-card__price']}
         >
           {USDollar.format(price)}

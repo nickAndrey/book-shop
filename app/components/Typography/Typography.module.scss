@@ -1,25 +1,27 @@
 @import '@/scss/shared/variables.module.scss';
 
-.typography-heading {
-  font-size: 3rem;
-  font-weight: 500;
-  margin: 0;
-}
+.typography {
+  &-heading {
+    font-size: 3rem;
+    font-weight: 500;
+    margin: 0;
+  }
 
-.typography-subheading {
-  font-size: 2rem;
-  font-weight: 400;
-  margin: 0;
-}
+  &-subheading {
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 0;
+  }
 
-.typography-body {
-  font-size: 1rem;
-  font-weight: 400;
-  margin: 0;
-}
+  &-body {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+  }
 
-.typography-caption {
-  font-size: 0.75rem;
-  font-weight: 400;
-  margin: 0;
+  &-caption {
+    font-size: 0.75rem;
+    font-weight: 400;
+    margin: 0;
+  }
 }

@@ -17,7 +17,7 @@ export default function Typography({
 }: TypographyProps) {
   return (
     <Component
-      className={mergeClassNames([className, styles[`typography-${variant}`]])}
+      className={mergeClassNames([styles[`typography-${variant}`], className])}
     >
       {children}
     </Component>

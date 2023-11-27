@@ -1,6 +1,8 @@
 @import '@/scss/shared/variables.module.scss';
 
 .typography {
+  color: var(--text-color);
+
   &-heading {
     font-size: 3rem;
     font-weight: 500;

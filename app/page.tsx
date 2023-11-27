@@ -1,4 +1,6 @@
+import Flex from './components/Flex/Flex';
 import ProductCard from './components/ProductCard/ProductCard';
+import ProductsGrid from './components/ProductsGrid/ProductsGrid';
 import Typography from './components/Typography/Typography';
 
 const books = [
@@ -76,12 +78,12 @@ const books = [
 
 export default function Home() {
   return (
-    <>
+    <Flex gap={32} flexDirection="column" alignItems="center">
       <Typography component="h1" variant="heading">
-        Inspiration books
+        Inspiration
       </Typography>
 
-      <div style={{ display: 'grid', gap: 10, marginTop: 32 }}>
+      <ProductsGrid>
         {books.map((book) => (
           <ProductCard
             key={book.bookTitle}
@@ -91,7 +93,7 @@ export default function Home() {
             price={book.price}
           />
         ))}
-      </div>
-    </>
+      </ProductsGrid>
+    </Flex>
   );
 }

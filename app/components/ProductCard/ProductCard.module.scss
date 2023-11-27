@@ -3,7 +3,8 @@
 .product-card {
   @include flex-column-center;
   width: 100%;
-  background-color: var(--grey-200);
+  height: 100%;
+  background-color: var(--grey-100);
   padding: getPxBySpace(3) getPxBySpace(2);
   box-sizing: border-box;
 

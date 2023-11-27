@@ -20,9 +20,7 @@
   }
 
   .navigation-trigger {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-center;
     gap: getPxBySpace(2);
     margin-right: auto;
     color: var(--primary-color);

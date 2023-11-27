@@ -11,10 +11,8 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <div className={styles.container}>
       <Header />
-      <main>
-        <Carousel />
-        {children}
-      </main>
+      <Carousel />
+      <main className={styles['main-container']}>{children}</main>
       <footer>Footer</footer>
     </div>
   );

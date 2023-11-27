@@ -1,7 +1,14 @@
+@import '@/scss/shared/variables.module.scss';
+
 .container {
   width: 100%;
   min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;
+}
+
+.main-container {
+  @include flex-column-center;
+  padding: 0 getPxBySpace(2);
 }

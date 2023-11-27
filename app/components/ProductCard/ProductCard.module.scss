@@ -1,0 +1,33 @@
+@import '@/scss/shared/variables.module.scss';
+
+.product-card {
+  @include flex-column-center;
+  width: 100%;
+  background-color: var(--grey-300);
+  padding: getPxBySpace(3) getPxBySpace(2);
+  box-sizing: border-box;
+
+  &__image-container {
+    position: relative;
+    width: getPxBySpace(20);
+    height: getPxBySpace(20);
+    margin-bottom: getPxBySpace(2);
+  }
+
+  &__info-container {
+    text-align: center;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    margin-bottom: getPxBySpace(2);
+  }
+
+  &__description {
+    margin-bottom: getPxBySpace(2);
+  }
+
+  &__price {
+    font-weight: bold;
+  }
+}

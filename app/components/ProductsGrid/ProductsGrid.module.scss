@@ -1,6 +1,7 @@
 @import '@/scss/shared/variables.module.scss';
 
 .products-grid {
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr;
   gap: getPxBySpace(2);
@@ -14,21 +15,8 @@
   @include flex-column-center;
   gap: getPxBySpace(2);
 
-  &:nth-of-type(even) {
-    @media (min-width: 640px) {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-auto-rows: max-content;
-      gap: getPxBySpace(1);
-    }
-  }
-
-  &:nth-of-type(odd) {
-    @media (min-width: 640px) {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-auto-rows: max-content;
-      gap: getPxBySpace(1);
-    }
+  @media (min-width: 640px) {
+    @include flex-row-center;
+    gap: getPxBySpace(1);
   }
 }

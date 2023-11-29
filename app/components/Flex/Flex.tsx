@@ -24,6 +24,7 @@ export default function Flex({
   gap,
 }: FlexProps) {
   const style = {
+    width: '100%',
     display: 'flex',
     justifyContent: justifyContent || 'flex-start',
     alignItems: alignItems || 'stretch',
